@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rersad/studying/pratics3351/pr2cpp",
-      "program": "/home/rersad/studying/pratics3351/pr2cpp/build/Debug/outDebug",
+      "cwd": "/home/rersad/studying/practics3351/pr2cpp/src",
+      "program": "/home/rersad/studying/practics3351/pr2cpp/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

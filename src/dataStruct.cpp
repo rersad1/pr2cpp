@@ -1,11 +1,9 @@
-#include <iostream>
 #include <unordered_map>
-#include <string>
 #include "dataStruct.h"
 using namespace std;
 
-void dataStruct::addData(const string& city, const string& street, const string& house, const string& floor) {
-    string address = city + " " + street + " " + house;
+void dataStruct::addData(const string& city, const string& street, const string& house, const string& floor) { // добавление данных в мапу
+    string address = city + " " + street + " " + house; // формируем адрес
     if (data.find(address) == data.end()) { // если адреса нет в мапе, то добавляем его
         buildingInfo info;
         info.floors = stoi(floor);

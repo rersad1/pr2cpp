@@ -1,16 +1,15 @@
 #include <iostream>
 #include <unordered_map>
 #include <map>
-#include "dataStruct.h"
 #include "dataProcessing.h"
 using namespace std;
 
 void dataProcessing::processing(const unordered_map<string, dataStruct::buildingInfo>& data) {
     for (const auto& entry : data) {
-        if (entry.second.repeatCount > 1) {
+        if (entry.second.repeatCount > 1) { // если адрес повторяется более одного раза выводим его и количество повторений
             cout << "Адрес: " << entry.first << " повторяется " << entry.second.repeatCount << " раз(a)" << endl;
         }
-        switch (entry.second.floors) {
+        switch (entry.second.floors) { // считаем количество этажей в каждом городе
             case 1:
                 cityFloorsInfo[entry.second.city].oneFloor++;
                 break;
@@ -30,7 +29,7 @@ void dataProcessing::processing(const unordered_map<string, dataStruct::building
     }
 }
 
-void dataProcessing::printCityInfo() {
+void dataProcessing::printCityInfo() { // вывод информации о количестве этажей в каждом городе в алфавитном порядке
     for (const auto& entry : cityFloorsInfo) {
         cout << "Город: " << entry.first << endl;
         cout << "Одноэтажные: " << entry.second.oneFloor << endl;
