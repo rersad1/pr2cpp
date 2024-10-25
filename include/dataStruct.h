@@ -14,6 +14,7 @@ public:
 
     void addData(const std::string& city, const std::string& street, const std::string& house, const std::string& floor); // добавление данных в мапу
     const std::unordered_map<std::string, buildingInfo>& getData() const; // геттер для мапы
+    void printData(); // вывод данных
 
 private:
     std::unordered_map<std::string, buildingInfo> data; // мапа для хранения данных

@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include "dataStruct.h"
+#include <iostream>
 using namespace std;
 
 void dataStruct::addData(const string& city, const string& street, const string& house, const string& floor) { // добавление данных в мапу
@@ -18,4 +19,11 @@ void dataStruct::addData(const string& city, const string& street, const string&
 
 const unordered_map<string, dataStruct::buildingInfo>& dataStruct::getData() const { // геттер для карты данных
     return data;
+}
+
+void dataStruct::printData() { // вывод данных
+    cout << "Данные из файла: " << endl;
+    for (const auto& entry : data) {
+        cout << "Адрес: " << entry.second.city << " " << entry.first << " " << entry.second.repeatCount << endl;
+    }
 }

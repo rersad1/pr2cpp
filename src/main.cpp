@@ -1,6 +1,6 @@
 #include <iostream>
 #include "getFile.h"
-#include "cvsParser.h"
+#include "csvParser.h"
 #include "dataProcessing.h"
 #include "dataStruct.h"
 #include <string>
@@ -12,7 +12,10 @@ int main() {
     dataProcessing dp;
     dataStruct ds;
     file.getUserPath();
+    cout << "Path: " << file.getPath() << endl;
     parser.parseCSV(file.getPath());
+    ds.printData();
     dp.processing(ds.getData());
     dp.printCityInfo();
+
 }

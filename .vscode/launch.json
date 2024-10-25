@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/rersad/studying/practics3351/pr2cpp/src",
-      "program": "/home/rersad/studying/practics3351/pr2cpp/src/build/Debug/outDebug",
+      "program": "${workspaceFolder}/build/main",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

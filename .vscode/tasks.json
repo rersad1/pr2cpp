@@ -1,22 +1,26 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+  "version": "2.0.0",
+  "tasks": [
       {
-        "label": "build",
-        "type": "shell",
-        "command": "g++",
-        "args": [
-          "-I${workspaceFolder}/include",
-          "-I${workspaceFolder}/lib",
-          "${workspaceFolder}/src/main.cpp",
-          "-o",
-          "${workspaceFolder}/build/main"
-        ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
+          "label": "build",
+          "type": "shell",
+          "command": "g++",
+          "args": [
+              "-I/home/rersad/studying/practics3351/pr2cpp/include",
+              "-I/home/rersad/studying/practics3351/pr2cpp/lib",
+              "/home/rersad/studying/practics3351/pr2cpp/src/main.cpp",
+              "/home/rersad/studying/practics3351/pr2cpp/src/dataProcessing.cpp",
+              "/home/rersad/studying/practics3351/pr2cpp/src/dataStruct.cpp",
+              "/home/rersad/studying/practics3351/pr2cpp/src/getFile.cpp",
+              "/home/rersad/studying/practics3351/pr2cpp/src/csvParser.cpp",
+              "-o",
+              "/home/rersad/studying/practics3351/pr2cpp/build/main"
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": ["$gcc"]
       }
-    ]
-  }
-  
+  ]
+}
