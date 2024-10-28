@@ -15,7 +15,6 @@ private:
         int fourFloors = 0;
         int fiveFloors = 0;
     };
-    
     std::map<std::string, floorsCount> cityFloorsInfo; // для хранения информации о количестве этажей в каждом городе в алфавитном порядке
 
 public:

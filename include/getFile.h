@@ -6,7 +6,7 @@
 class getFile {
     public:
         void getUserPath(); // ввод пути до файла
-        void getFileExtansion(std::string path); // получение расширения файла
+        void getFileExtansion(const std::string& path); // получение расширения файла
         std::string getPath(); // геттер для пути
         std::string getExtansion(); // геттер для расширения
     private:

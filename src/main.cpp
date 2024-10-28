@@ -20,8 +20,8 @@ int main() {
     parser.parseCSV(file.getPath(), ds);
     
     // Отладочное сообщение перед вызовом printData
-    cout << "Перед вызовом ds.printData()" << endl;
-    ds.printData();
+    // cout << "Перед вызовом ds.printData()" << endl;
+    // ds.printData();
     
     // Отладочное сообщение перед вызовом processing
     cout << "Перед вызовом dp.processing(ds.getData())" << endl;
