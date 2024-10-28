@@ -6,9 +6,8 @@
 #include "csv.h"
 
 class csvParser {
-    public:
-    dataStruct ds;
-    void parseCSV(std::string path);
+public:
+    void parseCSV(const std::string& path, dataStruct& ds); // добавлен параметр dataStruct& ds
 };   
 
 #endif // CVSPARSER_H

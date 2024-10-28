@@ -14,7 +14,7 @@ void getFile::getFileExtansion(string path) { // получение расшир
     extansion = path.substr(dot + 1);
     transform(extansion.begin(), extansion.end(), extansion.begin(), ::tolower); // перевод расширения в нижний регистр
     if (extansion != "csv" && extansion != "xml") {  // проверка на поддерживаемые расширения
-        cout << "Неверное расширение файла. Поддерживаются только файлы с расширением csv и txt" << endl;
+        cout << "Неверное расширение файла. Поддерживаются только файлы с расширением csv и xml" << endl;
         getUserPath(); // повторный ввод пути
     }
     

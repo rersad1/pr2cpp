@@ -31,11 +31,11 @@ void dataProcessing::processing(const unordered_map<string, dataStruct::building
 
 void dataProcessing::printCityInfo() { // вывод информации о количестве этажей в каждом городе в алфавитном порядке
     for (const auto& entry : cityFloorsInfo) {
-        cout << "Город: " << entry.first << endl;
-        cout << "Одноэтажные: " << entry.second.oneFloor << endl;
-        cout << "Двухэтажные: " << entry.second.twoFloors << endl;
-        cout << "Трехэтажные: " << entry.second.threeFloors << endl;
-        cout << "Четырехэтажные: " << entry.second.fourFloors << endl;
-        cout << "Пятиэтажные: " << entry.second.fiveFloors << endl;
+        cout << "Город: " << entry.first << "\n";
+        cout << "Одноэтажные: " << entry.second.oneFloor << "\n";
+        cout << "Двухэтажные: " << entry.second.twoFloors << "\n";
+        cout << "Трехэтажные: " << entry.second.threeFloors << "\n";
+        cout << "Четырехэтажные: " << entry.second.fourFloors << "\n";
+        cout << "Пятиэтажные: " << entry.second.fiveFloors << "\n";
     }
 }

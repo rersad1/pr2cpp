@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void csvParser::parseCSV(string path) {
+void csvParser::parseCSV(const string& path, dataStruct& ds) { // добавлен параметр dataStruct& ds
     io::CSVReader<4, io::trim_chars<' '>, io::double_quote_escape<';', '"'>> in(path);
     in.read_header(io::ignore_extra_column, "city", "street", "house", "floor");
     string city, street, house, floor;
