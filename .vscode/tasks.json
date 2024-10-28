@@ -12,6 +12,7 @@
                 "/home/rersad/studying/practics3351/pr2cpp/src/dataProcessing.cpp",
                 "/home/rersad/studying/practics3351/pr2cpp/src/dataStruct.cpp",
                 "/home/rersad/studying/practics3351/pr2cpp/src/getFile.cpp",
+                "/home/rersad/studying/practics3351/pr2cpp/src/xmlParser.cpp",
                 "/home/rersad/studying/practics3351/pr2cpp/src/csvParser.cpp",
                 "-o",
                 "/home/rersad/studying/practics3351/pr2cpp/build/main"

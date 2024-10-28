@@ -3,22 +3,28 @@
 #include "csvParser.h"
 #include "dataProcessing.h"
 #include "dataStruct.h"
+#include "xmlParser.h"
 #include <string>
 using namespace std;
 
 int main() {
     getFile file;
-    csvParser parser;
+    csvParser csvParser;
     dataProcessing dp;
     dataStruct ds;
+    xmlParser xmlParser;
     
     // Получение пути к файлу от пользователя
     file.getUserPath();
     cout << "Path: " << file.getPath() << endl;
     
-    // Парсинг CSV файла, данные записываются в основной объект ds
-    parser.parseCSV(file.getPath(), ds);
-    
+    if (file.getExtansion() == "csv") {
+        csvParser.parseCSV(file.getPath(), ds);
+    }
+    else {
+        xmlParser.parseXML(file.getPath(), ds);
+    }
+        
     // Отладочное сообщение перед вызовом printData
     // cout << "Перед вызовом ds.printData()" << endl;
     // ds.printData();
