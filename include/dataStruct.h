@@ -16,7 +16,7 @@ public:
     const std::unordered_map<std::string, buildingInfo>& getData() const; // геттер для мапы
     void printKeysAndValues() const;
     void printData() const; // вывод данных
-
+    void clearData(); // очистка данных
 private:
     std::unordered_map<std::string, buildingInfo> data; // мапа для хранения данных
 };

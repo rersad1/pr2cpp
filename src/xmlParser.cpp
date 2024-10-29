@@ -1,6 +1,5 @@
 #include "xmlParser.h"
 #include <iostream>
-#include <iostream>
 #include <fstream>
 #include <sstream>
 
@@ -34,7 +33,7 @@ void xmlParser::parseXML(const string& filePath, dataStruct& ds) {
         return;
     }
 
-    for (xml_node<>* node = root->first_node("entry"); node; node = node->next_sibling()) {
+    for (xml_node<>* node = root->first_node("item"); node; node = node->next_sibling()) {
         string city = node->first_attribute("city")->value();
         string street = node->first_attribute("street")->value();
         string house = node->first_attribute("house")->value();

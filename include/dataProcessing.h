@@ -21,6 +21,7 @@ public:
     dataStruct ds;
     void processing(const std::unordered_map<std::string, dataStruct::buildingInfo>& data); // вывод повторяющихся элементов и подсчет количества этажей в каждом городе
     void printCityInfo(); // вывод информации о количестве этажей в каждом городе
+    void clearData(); // очистка данных
 };
 
 #endif // DATAPROCESSING_H

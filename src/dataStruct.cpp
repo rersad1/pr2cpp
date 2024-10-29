@@ -17,13 +17,11 @@ void dataStruct::addData(const string& city, const string& street, const string&
     }
 }
 
+void dataStruct::clearData() {
+    data.clear();
+}
+
+
 const unordered_map<string, dataStruct::buildingInfo>& dataStruct::getData() const {
     return data;
 }
-
-/*void dataStruct::printData() const {
-    cout << "Данные из файла: " << endl;
-    for (const auto& entry : data) {
-        cout << "Адрес: " << entry.second.city << " " << entry.first << " " << entry.second.repeatCount << "\n";
-    }
-} */

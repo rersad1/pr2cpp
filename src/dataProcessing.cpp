@@ -1,6 +1,5 @@
 #include <iostream>
 #include <unordered_map>
-#include <map>
 #include <iomanip>
 #include "dataProcessing.h"
 using namespace std;
@@ -41,4 +40,8 @@ cout << "------------------------------" << endl;
         cout << "Пятиэтажные: " << entry.second.fiveFloors << endl;
         cout << "------------------------------" << endl;
     }
+}
+
+void dataProcessing::clearData() {
+    cityFloorsInfo.clear();
 }

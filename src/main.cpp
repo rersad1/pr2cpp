@@ -1,11 +1,14 @@
 #include <iostream>
+#include <string>
+#include <chrono>
 #include "getFile.h"
 #include "csvParser.h"
 #include "dataProcessing.h"
 #include "dataStruct.h"
 #include "xmlParser.h"
-#include <string>
+
 using namespace std;
+using namespace std::chrono;
 
 int main() {
     getFile file;
@@ -13,30 +16,24 @@ int main() {
     dataProcessing dp;
     dataStruct ds;
     xmlParser xmlParser;
-    
-    // Получение пути к файлу от пользователя
-    file.getUserPath();
-    cout << "Path: " << file.getPath() << endl;
-    
-    if (file.getExtansion() == "csv") {
-        csvParser.parseCSV(file.getPath(), ds);
-    }
-    else {
-        xmlParser.parseXML(file.getPath(), ds);
-    }
-        
-    // Отладочное сообщение перед вызовом printData
-    // cout << "Перед вызовом ds.printData()" << endl;
-    // ds.printData();
-    
-    // Отладочное сообщение перед вызовом processing
-    cout << "Перед вызовом dp.processing(ds.getData())" << endl;
-    dp.processing(ds.getData());
-    
-    // Отладочное сообщение перед вызовом printCityInfo
-    cout << "Перед вызовом dp.printCityInfo()" << endl;
-    dp.printCityInfo();
+    while (true) {
+        file.getUserPath();
+        cout << "Путь " << file.getPath() << endl;
+        auto start = high_resolution_clock::now();
+        if (file.getExtansion() == "csv") {
+            csvParser.parseCSV(file.getPath(), ds);
+        }
+        else {
+            xmlParser.parseXML(file.getPath(), ds);
+        }
+        dp.processing(ds.getData());
+        dp.printCityInfo();
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<milliseconds>(stop - start);
+        cout << "Время выполнения программы: " << duration.count() << " мс" << endl;
 
-    // Отладочное сообщение в конце main
-    cout << "Конец main()" << endl;
+        dp.clearData();
+        ds.clearData();
+    }
+
 }
